@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SaaS & Tech Startup — Premium Cloud Platform for Modern Teams</title>
+<meta name="description" content="SaaS & Tech Startup is a premium cloud platform helping modern teams ship faster with AI automation, analytics, and enterprise-grade security." />
+<meta name="keywords" content="saas, tech startup, cloud platform, analytics, ai automation, enterprise software" />
+<meta name="author" content="SaaS & Tech Startup" />
+<meta property="og:title" content="SaaS & Tech Startup — Premium Cloud Platform" />
+<meta property="og:description" content="Ship faster with AI automation, analytics, and enterprise-grade security." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+/* ============ RESET & BASE ============ */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#FCFBF8;--bg-2:#F5F3EE;--glass:rgba(255,255,255,.58);
+  --text:#1B1B2F;--text-2:#5B6078;
+  --purple:#6D28D9;--violet:#8B5CF6;--gold:#D4A017;--peach:#FFB997;
+  --mint:#4ADEC8;--lav:#D8B4FE;
+  --grad:linear-gradient(135deg,#6D28D9,#8B5CF6,#D4A017,#FFB997);
+  --grad-soft:linear-gradient(135deg,#8B5CF6,#6D28D9);
+  --shadow:0 20px 60px rgba(109,40,217,.12);
+  --shadow-lg:0 40px 100px rgba(109,40,217,.18);
+  --r:24px;--r-sm:16px;--r-lg:32px;
+  --max:1200px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+body.locked{overflow:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+section{position:relative}
+::selection{background:var(--lav);color:var(--purple)}
+
+/* ============ AURORA BACKGROUND ============ */
+.aurora{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;animation:float 18s ease-in-out infinite}
+.blob.b1{width:520px;height:520px;background:radial-gradient(circle,#8B5CF6,transparent 70%);top:-120px;left:-100px}
+.blob.b2{width:480px;height:480px;background:radial-gradient(circle,#4ADEC8,transparent 70%);top:30%;right:-120px;animation-delay:-6s}
+.blob.b3{width:420px;height:420px;background:radial-gradient(circle,#FFB997,transparent 70%);bottom:-120px;left:30%;animation-delay:-12s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.08)}66%{transform:translate(-30px,30px) scale(.95)}}
+
+/* mouse glow */
+.mouse-glow{position:fixed;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.18),transparent 60%);pointer-events:none;z-index:-1;transform:translate(-50%,-50%);transition:opacity .3s;mix-blend-mode:multiply}
+
+/* ============ LAYOUT ============ */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--purple);background:rgba(139,92,246,.1);padding:8px 16px;border-radius:100px;border:1px solid rgba(139,92,246,.2)}
+h1,h2,h3,h4{font-family:'Poppins',sans-serif;line-height:1.2;font-weight:700;letter-spacing:-.02em}
+.h-display{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:800;line-height:1.08}
+.h-section{font-size:clamp(2rem,4vw,3rem);font-weight:700}
+.lead{font-size:clamp(1rem,1.4vw,1.2rem);color:var(--text-2);max-width:620px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.center{text-align:center}
+.center .lead{margin:20px auto 0}
+.sec-pad{padding:100px 0}
+.sec-head{max-width:680px;margin:0 auto 56px;text-align:center}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Plus Jakarta Sans';font-weight:600;font-size:15px;padding:14px 26px;border-radius:100px;border:none;cursor:pointer;transition:all .35s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden}
+.btn-primary{background:var(--grad);color:#fff;background-size:200% 200%;box-shadow:0 12px 30px rgba(109,40,217,.35)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(109,40,217,.45);background-position:100% 50%}
+.btn-ghost{background:var(--glass);color:var(--text);border:1px solid rgba(109,40,217,.18);backdrop-filter:blur(12px)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--violet);box-shadow:0 12px 30px rgba(139,92,246,.2)}
+.btn-white{background:#fff;color:var(--purple);box-shadow:0 8px 24px rgba(27,27,47,.1)}
+.btn-white:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(27,27,47,.16)}
+
+/* ============ HEADER ============ */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .4s ease}
+.nav{max-width:var(--max);margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;transition:all .4s}
+header.scrolled .nav{background:var(--glass);backdrop-filter:blur(20px);border-radius:100px;margin-top:14px;border:1px solid rgba(255,255,255,.6);box-shadow:0 10px 30px rgba(109,40,217,.1);padding:12px 22px}
+.logo{display:flex;align-items:center}
+.logo-mark{display:none}
+.site-logo{height:38px;width:auto;object-fit:contain;filter:hue-rotate(0deg) saturate(1.1);transition:opacity .3s}
+.site-logo:hover{opacity:.85}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{padding:10px 16px;border-radius:100px;font-weight:500;font-size:15px;color:var(--text-2);position:relative;transition:all .3s}
+.nav-links a::after{content:'';position:absolute;left:16px;right:16px;bottom:6px;height:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.nav-links a:hover{color:var(--purple)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.nav-cta .btn{padding:11px 22px;font-size:14px}
+.hamburger{display:none;background:var(--glass);border:1px solid rgba(109,40,217,.18);width:46px;height:46px;border-radius:14px;cursor:pointer;color:var(--purple);font-size:18px;backdrop-filter:blur(10px)}
+
+/* mobile menu */
+.mobile-menu{position:fixed;inset:0;z-index:200;transform:translateX(100%);transition:transform .45s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}
+.mobile-menu.open{transform:translateX(0)}
+.mm-bg{position:absolute;inset:0;background:rgba(252,251,248,.85);backdrop-filter:blur(24px)}
+.mm-card{position:relative;margin:18px;width:calc(100% - 36px);background:#fff;border-radius:var(--r-lg);padding:28px;box-shadow:var(--shadow-lg);border:1px solid rgba(109,40,217,.1);overflow-y:auto}
+.mm-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.mm-close{width:44px;height:44px;border-radius:12px;border:1px solid rgba(109,40,217,.18);background:var(--bg-2);color:var(--purple);font-size:18px;cursor:pointer}
+.mm-links{display:flex;flex-direction:column;gap:6px}
+.mm-links a{padding:14px 16px;border-radius:14px;font-weight:500;font-size:17px;color:var(--text);transition:all .3s}
+.mm-links a:hover{background:var(--bg-2);color:var(--purple);padding-left:22px}
+.mm-cta{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.mm-cta .btn{justify-content:center;width:100%}
+
+/* ============ HERO ============ */
+.hero{padding:170px 0 90px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero h1{margin:24px 0 20px}
+.hero .lead{margin-bottom:34px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+.hs-num{font-family:'Poppins';font-size:1.9rem;font-weight:800;color:var(--purple)}
+.hs-lbl{font-size:13px;color:var(--text-2);font-weight:500}
+.hero-visual{position:relative}
+.hero-card{background:var(--glass);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow-lg);position:relative;z-index:2}
+.hc-top{display:flex;align-items:center;gap:8px;margin-bottom:18px}
+.hc-dot{width:11px;height:11px;border-radius:50%}
+.hc-bar{height:120px;background:linear-gradient(180deg,rgba(139,92,246,.12),rgba(74,222,200,.08));border-radius:14px;display:flex;align-items:flex-end;gap:8px;padding:14px;margin-bottom:16px}
+.hc-bar i{flex:1;background:var(--grad-soft);border-radius:6px 6px 0 0;animation:grow 2s ease infinite alternate;transform-origin:bottom}
+.hc-bar i:nth-child(1){height:40%;animation-delay:0s}
+.hc-bar i:nth-child(2){height:65%;animation-delay:.3s}
+.hc-bar i:nth-child(3){height:50%;animation-delay:.6s}
+.hc-bar i:nth-child(4){height:85%;animation-delay:.9s}
+.hc-bar i:nth-child(5){height:60%;animation-delay:1.2s}
+@keyframes grow{from{transform:scaleY(.6)}to{transform:scaleY(1)}}
+.hc-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hc-mini{background:#fff;border-radius:14px;padding:14px;border:1px solid rgba(109,40,217,.08)}
+.hc-mini .n{font-family:'Poppins';font-weight:700;font-size:1.3rem}
+.hc-mini .l{font-size:12px;color:var(--text-2)}
+.float-card{position:absolute;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:var(--shadow);border:1px solid rgba(109,40,217,.08);display:flex;align-items:center;gap:12px;z-index:3;animation:bob 5s ease-in-out infinite}
+.fc1{top:-22px;right:-10px}
+.fc2{bottom:40px;left:-30px;animation-delay:-2.5s}
+.fc-ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;color:#fff;font-size:16px}
+.fc-t{font-weight:700;font-size:14px}
+.fc-s{font-size:11px;color:var(--text-2)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+/* ============ TRUSTED ============ */
+.trusted{padding:50px 0 30px}
+.trusted .center{margin-bottom:30px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-2)}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee-track{display:flex;gap:60px;width:max-content;animation:slide 28s linear infinite}
+.mlogo{display:flex;align-items:center;gap:10px;font-family:'Poppins';font-weight:700;font-size:22px;color:var(--text-2);opacity:.7;transition:opacity .3s}
+.mlogo:hover{opacity:1;color:var(--purple)}
+.mlogo i{font-size:24px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ============ FEATURES ============ */
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feature{background:var(--glass);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.7);border-radius:var(--r);padding:32px;transition:all .4s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden}
+.feature::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity .4s;z-index:0}
+.feature:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:transparent}
+.feature>*{position:relative;z-index:1}
+.f-ic{width:56px;height:56px;border-radius:16px;background:var(--grad-soft);display:grid;place-items:center;color:#fff;font-size:22px;margin-bottom:20px;box-shadow:0 10px 24px rgba(139,92,246,.3);transition:transform .4s}
+.feature:hover .f-ic{transform:scale(1.1) rotate(-6deg)}
+.feature h3{font-size:1.3rem;margin-bottom:10px}
+.feature p{color:var(--text-2);font-size:15px}
+
+/* ============ WHY CHOOSE ============ */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-img{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,.6)}
+.why-img img{width:100%;height:480px;object-fit:cover}
+.why-img::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(109,40,217,.25),transparent)}
+.why-list{display:flex;flex-direction:column;gap:20px;margin-top:28px}
+.why-item{display:flex;gap:16px;align-items:flex-start}
+.why-item .ic{width:44px;height:44px;border-radius:12px;background:rgba(139,92,246,.12);color:var(--purple);display:grid;place-items:center;font-size:18px;flex-shrink:0}
+.why-item h4{font-size:1.05rem;margin-bottom:4px}
+.why-item p{color:var(--text-2);font-size:14px}
+.counters{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+.counter{background:var(--glass);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-sm);padding:22px;text-align:center}
+.counter .n{font-family:'Poppins';font-size:2rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.counter .l{font-size:13px;color:var(--text-2);margin-top:4px}
+
+/* ============ SERVICES PREVIEW ============ */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc{background:#fff;border-radius:var(--r);padding:28px;border:1px solid rgba(109,40,217,.08);transition:all .4s;position:relative;overflow:hidden}
+.svc::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.svc:hover::after{transform:scaleX(1)}
+.svc .ic{width:50px;height:50px;border-radius:14px;background:rgba(139,92,246,.1);color:var(--purple);display:grid;place-items:center;font-size:20px;margin-bottom:18px}
+.svc h3{font-size:1.2rem;margin-bottom:8px}
+.svc p{color:var(--text-2);font-size:14px;margin-bottom:14px}
+.svc a{font-weight:600;color:var(--purple);font-size:14px;display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
+.svc:hover a{gap:12px}
+
+/* ============ DASHBOARD PREVIEW ============ */
+.dash-preview{background:linear-gradient(180deg,var(--bg-2),var(--bg));border-radius:var(--r-lg);padding:60px 40px;position:relative;overflow:hidden}
+.laptop{max-width:920px;margin:0 auto;position:relative}
+.laptop-screen{background:#1B1B2F;border-radius:18px 18px 8px 8px;padding:14px;box-shadow:var(--shadow-lg)}
+.laptop-inner{background:var(--bg);border-radius:10px;overflow:hidden;display:grid;grid-template-columns:200px 1fr;min-height:380px}
+.lap-side{background:linear-gradient(180deg,#6D28D9,#8B5CF6);padding:20px 14px;color:#fff}
+.lap-side .ls-logo{font-weight:700;margin-bottom:24px;font-size:15px}
+.lap-side a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;font-size:13px;opacity:.8;transition:all .3s}
+.lap-side a.active{background:rgba(255,255,255,.18);opacity:1}
+.lap-main{padding:22px}
+.lap-main h4{font-size:15px;margin-bottom:16px}
+.lap-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.lc{background:#fff;border-radius:12px;padding:14px;border:1px solid rgba(109,40,217,.08)}
+.lc .n{font-family:'Poppins';font-weight:700;font-size:1.1rem;color:var(--purple)}
+.lc .l{font-size:11px;color:var(--text-2)}
+.lap-chart{height:140px;background:linear-gradient(180deg,rgba(139,92,246,.15),rgba(74,222,200,.08));border-radius:12px;display:flex;align-items:flex-end;gap:10px;padding:14px}
+.lap-chart i{flex:1;background:var(--grad);border-radius:6px 6px 0 0;transform-origin:bottom}
+.laptop-base{height:14px;background:linear-gradient(180deg,#cdcdd6,#a9a9b8);border-radius:0 0 16px 16px;margin:0 -40px;position:relative}
+.laptop-base::after{content:'';position:absolute;left:50%;top:0;transform:translateX(-50%);width:120px;height:6px;background:#8a8a98;border-radius:0 0 10px 10px}
+
+/* ============ PRICING ============ */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.price{background:#fff;border-radius:var(--r);padding:34px;border:1px solid rgba(109,40,217,.1);transition:all .4s;position:relative}
+.price:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
+.price.pop{border:2px solid var(--violet);box-shadow:var(--shadow)}
+.badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--grad);color:#fff;font-size:12px;font-weight:600;padding:6px 16px;border-radius:100px;white-space:nowrap}
+.price h3{font-size:1.2rem;margin-bottom:8px}
+.price .desc{color:var(--text-2);font-size:14px;margin-bottom:18px}
+.price .amt{font-family:'Poppins';font-size:2.6rem;font-weight:800}
+.price .amt span{font-size:15px;font-weight:500;color:var(--text-2)}
+.price ul{display:flex;flex-direction:column;gap:12px;margin:22px 0}
+.price ul li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-2)}
+.price ul li i{color:var(--mint)}
+.price .btn{width:100%;justify-content:center;margin-top:8px}
+
+/* ============ TESTIMONIALS ============ */
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tst{background:var(--glass);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.7);border-radius:var(--r);padding:30px;transition:all .4s}
+.tst:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.tst .stars{color:var(--gold);margin-bottom:14px;font-size:15px}
+.tst p{font-size:15px;color:var(--text);margin-bottom:20px;font-style:italic}
+.tst-user{display:flex;align-items:center;gap:14px}
+.tst-user img{width:50px;height:50px;border-radius:50%;object-fit:cover;border:2px solid #fff}
+.tst-user .n{font-weight:700;font-size:15px}
+.tst-user .r{font-size:13px;color:var(--text-2)}
+
+/* ============ FAQ ============ */
+.faq-wrap{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq{background:var(--glass);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-sm);overflow:hidden;transition:all .3s}
+.faq-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;cursor:pointer;font-weight:600;font-size:16px}
+.faq-head i{color:var(--purple);transition:transform .3s}
+.faq.open .faq-head i{transform:rotate(45deg)}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .4s ease;padding:0 24px}
+.faq.open .faq-body{max-height:200px;padding-bottom:22px}
+.faq-body p{color:var(--text-2);font-size:15px}
+
+/* ============ CTA ============ */
+.cta-band{background:var(--grad);border-radius:var(--r-lg);padding:70px 50px;text-align:center;color:#fff;position:relative;overflow:hidden;background-size:200% 200%;animation:shift 8s ease infinite}
+@keyframes shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.cta-band h2{color:#fff;font-size:clamp(2rem,4vw,2.8rem);margin-bottom:16px}
+.cta-band p{font-size:1.1rem;opacity:.92;max-width:560px;margin:0 auto 30px}
+.cta-band .btn-white{margin:0 8px}
+
+/* ============ FOOTER ============ */
+footer{background:var(--bg-2);padding:70px 0 30px;position:relative;border-top:1px solid rgba(109,40,217,.08)}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-brand .logo{margin-bottom:16px}
+.foot-brand p{color:var(--text-2);font-size:14px;max-width:300px;margin-bottom:20px}
+.foot-social{display:flex;gap:10px}
+.foot-social a{width:42px;height:42px;border-radius:12px;background:#fff;border:1px solid rgba(109,40,217,.1);display:grid;place-items:center;color:var(--purple);transition:all .35s}
+.foot-social a:hover{background:var(--grad);color:#fff;transform:translateY(-4px);box-shadow:0 10px 24px rgba(109,40,217,.3)}
+.foot-col h4{font-size:15px;margin-bottom:18px}
+.foot-col ul{display:flex;flex-direction:column;gap:10px}
+.foot-col ul a{color:var(--text-2);font-size:14px;transition:all .3s}
+.foot-col ul a:hover{color:var(--purple);padding-left:6px}
+.foot-news{display:flex;gap:8px;margin-top:14px}
+.foot-news input{flex:1;padding:12px 16px;border-radius:100px;border:1px solid rgba(109,40,217,.18);background:#fff;font-family:inherit;font-size:14px;outline:none}
+.foot-news input:focus{border-color:var(--violet)}
+.foot-news button{width:46px;height:46px;border-radius:50%;background:var(--grad);color:#fff;border:none;cursor:pointer;flex-shrink:0;transition:transform .3s}
+.foot-news button:hover{transform:scale(1.08)}
+.foot-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:26px;border-top:1px solid rgba(109,40,217,.1);flex-wrap:wrap;gap:14px}
+.foot-bottom p{color:var(--text-2);font-size:13px}
+.foot-bottom .links{display:flex;gap:22px}
+.foot-bottom .links a{color:var(--text-2);font-size:13px;transition:color .3s}
+.foot-bottom .links a:hover{color:var(--purple)}
+
+/* ============ REVEAL ANIM ============ */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.l{transform:translateX(-50px)}
+.reveal.r{transform:translateX(50px)}
+.reveal.z{transform:scale(.9)}
+.reveal.in.l,.reveal.in.r,.reveal.in.z{transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:980px){
+  .hero-grid,.why-grid{grid-template-columns:1fr;gap:40px}
+  .hero-visual{order:-1;max-width:480px;margin:0 auto}
+  .features-grid,.svc-grid,.tst-grid{grid-template-columns:repeat(2,1fr)}
+  .price-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .counters{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:grid;place-items:center}
+  .features-grid,.svc-grid,.tst-grid{grid-template-columns:1fr}
+  .sec-pad{padding:70px 0}
+  .hero{padding:130px 0 60px}
+  .cta-band{padding:50px 26px}
+  .foot-grid{grid-template-columns:1fr;gap:28px}
+  .foot-bottom{flex-direction:column;text-align:center}
+  .lap-side{display:none}
+  .laptop-inner{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="aurora"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="mouse-glow" id="mouseGlow"></div>
+
+<!-- HEADER -->
+<header id="header">
+  <nav class="nav">
+    <a href="index.html" class="logo"><img src="/stackly-logo-violet.webp" alt="Stackly" class="site-logo" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="login.html" class="btn btn-ghost">Login</a>
+      <a href="signup.html" class="btn btn-primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+  </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-bg"></div>
+  <div class="mm-card">
+    <div class="mm-head">
+      <a href="index.html" class="logo"><img src="/stackly-logo-violet.webp" alt="Stackly" class="site-logo" /></a>
+      <button class="mm-close" id="mmClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mm-links">
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+      <li><a href="services.html"><i class="fa-solid fa-layer-group"></i> Services</a></li>
+      <li><a href="pricing.html"><i class="fa-solid fa-tag"></i> Pricing</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+    </ul>
+    <div class="mm-cta">
+      <a href="login.html" class="btn btn-ghost">Login</a>
+      <a href="signup.html" class="btn btn-primary">Get Started</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal l">
+        <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> The future of cloud software</span>
+        <h1 class="h-display">Ship faster with a <span class="grad-text">premium cloud platform</span> built for modern teams</h1>
+        <p class="lead">Stackly unifies analytics, AI automation, and enterprise security in one beautifully designed workspace — so your team can focus on building, not wiring tools together.</p>
+        <div class="hero-cta">
+          <a href="signup.html" class="btn btn-primary">Start free trial <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#dash" class="btn btn-ghost"><i class="fa-solid fa-circle-play"></i> Watch demo</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="hs-num" data-count="99.9" data-suffix="%">0</div><div class="hs-lbl">Uptime SLA</div></div>
+          <div><div class="hs-num" data-count="48" data-suffix="K+">0</div><div class="hs-lbl">Active teams</div></div>
+          <div><div class="hs-num" data-count="180" data-suffix="+">0</div><div class="hs-lbl">Countries</div></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal r">
+        <div class="hero-card">
+          <div class="hc-top"><span class="hc-dot" style="background:#ff5f57"></span><span class="hc-dot" style="background:#febc2e"></span><span class="hc-dot" style="background:#28c840"></span></div>
+          <div class="hc-bar"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="hc-row">
+            <div class="hc-mini"><div class="n grad-text">$48.2K</div><div class="l">Monthly revenue</div></div>
+            <div class="hc-mini"><div class="n" style="color:var(--mint)">+24%</div><div class="l">Growth</div></div>
+          </div>
+        </div>
+        <div class="float-card fc1"><div class="fc-ic" style="background:var(--mint)"><i class="fa-solid fa-check"></i></div><div><div class="fc-t">Deploy done</div><div class="fc-s">2.4s build time</div></div></div>
+        <div class="float-card fc2"><div class="fc-ic" style="background:var(--violet)"><i class="fa-solid fa-users"></i></div><div><div class="fc-t">1,204 users</div><div class="fc-s">Online now</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUSTED -->
+<section class="trusted">
+  <div class="wrap">
+    <p class="center">Trusted by fast-growing teams worldwide</p>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span class="mlogo"><i class="fa-brands fa-slack"></i> Slack</span>
+        <span class="mlogo"><i class="fa-brands fa-figma"></i> Figma</span>
+        <span class="mlogo"><i class="fa-brands fa-stripe-s"></i> Stripe</span>
+        <span class="mlogo"><i class="fa-brands fa-github"></i> GitHub</span>
+        <span class="mlogo"><i class="fa-brands fa-spotify"></i> Spotify</span>
+        <span class="mlogo"><i class="fa-brands fa-dropbox"></i> Dropbox</span>
+        <span class="mlogo"><i class="fa-brands fa-slack"></i> Slack</span>
+        <span class="mlogo"><i class="fa-brands fa-figma"></i> Figma</span>
+        <span class="mlogo"><i class="fa-brands fa-stripe-s"></i> Stripe</span>
+        <span class="mlogo"><i class="fa-brands fa-github"></i> GitHub</span>
+        <span class="mlogo"><i class="fa-brands fa-spotify"></i> Spotify</span>
+        <span class="mlogo"><i class="fa-brands fa-dropbox"></i> Dropbox</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec-pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><i class="fa-solid fa-wand-magic-sparkles"></i> Features</span>
+      <h2 class="h-section" style="margin-top:18px">Everything your team needs, <span class="grad-text">in one platform</span></h2>
+      <p class="lead">Powerful building blocks designed to scale from your first user to your millionth — without the operational headache.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature reveal"><div class="f-ic"><i class="fa-solid fa-bolt"></i></div><h3>Lightning fast</h3><p>Edge-optimized infrastructure delivers sub-50ms response times globally, so your app always feels instant.</p></div>
+      <div class="feature reveal"><div class="f-ic" style="background:linear-gradient(135deg,#D4A017,#FFB997)"><i class="fa-solid fa-shield-halved"></i></div><h3>Enterprise security</h3><p>SOC 2 Type II, GDPR, and HIPAA compliance with end-to-end encryption baked in by default.</p></div>
+      <div class="feature reveal"><div class="f-ic" style="background:linear-gradient(135deg,#4ADEC8,#8B5CF6)"><i class="fa-solid fa-chart-line"></i></div><h3>Real-time analytics</h3><p>Live dashboards and custom reports that update the moment your data changes — no refresh needed.</p></div>
+      <div class="feature reveal"><div class="f-ic"><i class="fa-solid fa-robot"></i></div><h3>AI automation</h3><p>Automate repetitive workflows with built-in AI that learns your patterns and handles the busywork.</p></div>
+      <div class="feature reveal"><div class="f-ic" style="background:linear-gradient(135deg,#D8B4FE,#6D28D9)"><i class="fa-solid fa-plug"></i></div><h3>500+ integrations</h3><p>Connect the tools you already love with one-click integrations and a fully documented REST API.</p></div>
+      <div class="feature reveal"><div class="f-ic" style="background:linear-gradient(135deg,#FFB997,#D4A017)"><i class="fa-solid fa-globe"></i></div><h3>Global scale</h3><p>Auto-scaling across 32 regions means you never think about capacity, even during your biggest launches.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="sec-pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="why-img reveal l"><img loading="lazy" src="https://images.pexels.com/photos/1181738/pexels-photo-1181738.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Modern team collaborating in a bright office" /></div>
+      <div class="reveal r">
+        <span class="eyebrow"><i class="fa-solid fa-award"></i> Why choose us</span>
+        <h2 class="h-section" style="margin:18px 0 14px">Built for teams who <span class="grad-text">refuse to compromise</span></h2>
+        <p class="lead">We obsess over the details so you don't have to — from pixel-perfect interfaces to infrastructure that never sleeps.</p>
+        <div class="why-list">
+          <div class="why-item"><div class="ic"><i class="fa-solid fa-rocket"></i></div><div><h4>Ship in days, not months</h4><p>Pre-built components and templates cut your time-to-launch dramatically.</p></div></div>
+          <div class="why-item"><div class="ic"><i class="fa-solid fa-lock"></i></div><div><h4>Security by default</h4><p>Every account ships with encryption, audit logs, and SSO ready to enable.</p></div></div>
+          <div class="why-item"><div class="ic"><i class="fa-solid fa-headset"></i></div><div><h4>Support that actually helps</h4><p>Real engineers on chat 24/7, with a median first response under 2 minutes.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="counters">
+      <div class="counter reveal z"><div class="n" data-count="48000">0</div><div class="l">Active teams</div></div>
+      <div class="counter reveal z"><div class="n" data-count="99.9" data-suffix="%">0</div><div class="l">Uptime</div></div>
+      <div class="counter reveal z"><div class="n" data-count="2.4" data-suffix="B">0</div><div class="l">API calls / day</div></div>
+      <div class="counter reveal z"><div class="n" data-count="180" data-suffix="+">0</div><div class="l">Countries</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="sec-pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><i class="fa-solid fa-layer-group"></i> Services</span>
+      <h2 class="h-section" style="margin-top:18px">Solutions for every <span class="grad-text">stage of growth</span></h2>
+      <p class="lead">From your first deploy to enterprise scale, our services cover the full journey.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><div class="ic"><i class="fa-solid fa-cloud"></i></div><h3>Cloud Infrastructure</h3><p>Managed hosting that scales automatically with your traffic and workload demands.</p><a href="services.html">Learn more <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="svc reveal"><div class="ic"><i class="fa-solid fa-brain"></i></div><h3>AI & Automation</h3><p>Intelligent workflows that learn from your data and handle repetitive tasks for you.</p><a href="services.html">Learn more <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="svc reveal"><div class="ic"><i class="fa-solid fa-chart-pie"></i></div><h3>Data Analytics</h3><p>Turn raw events into decisions with live dashboards and predictive insights.</p><a href="services.html">Learn more <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="svc reveal"><div class="ic"><i class="fa-solid fa-shield-halved"></i></div><h3>Security & Compliance</h3><p>Stay audit-ready with built-in controls, logging, and policy enforcement.</p><a href="services.html">Learn more <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="svc reveal"><div class="ic"><i class="fa-solid fa-code"></i></div><h3>Developer Tools</h3><p>SDKs, CLI, and APIs that make building on the platform a genuine pleasure.</p><a href="services.html">Learn more <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="svc reveal"><div class="ic"><i class="fa-solid fa-handshake"></i></div><h3>Enterprise Support</h3><p>Dedicated architects, SLAs, and white-glove onboarding for large teams.</p><a href="services.html">Learn more <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD PREVIEW -->
+<section class="sec-pad" id="dash" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><i class="fa-solid fa-gauge-high"></i> Dashboard</span>
+      <h2 class="h-section" style="margin-top:18px">A command center your team will <span class="grad-text">actually enjoy</span></h2>
+      <p class="lead">Every metric, project, and alert in one calm, beautiful workspace.</p>
+    </div>
+    <div class="dash-preview reveal z">
+      <div class="laptop">
+        <div class="laptop-screen">
+          <div class="laptop-inner">
+            <div class="lap-side">
+              <div class="ls-logo"><i class="fa-solid fa-bolt"></i> Stackly</div>
+              <a class="active"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+              <a><i class="fa-solid fa-chart-line"></i> Analytics</a>
+              <a><i class="fa-solid fa-users"></i> Users</a>
+              <a><i class="fa-solid fa-folder"></i> Projects</a>
+              <a><i class="fa-solid fa-coins"></i> Revenue</a>
+              <a><i class="fa-solid fa-gear"></i> Settings</a>
+            </div>
+            <div class="lap-main">
+              <h4>Welcome back, here's your overview</h4>
+              <div class="lap-cards">
+                <div class="lc"><div class="n">$48.2K</div><div class="l">Revenue this month</div></div>
+                <div class="lc"><div class="n" style="color:var(--mint)">12,480</div><div class="l">Active users</div></div>
+                <div class="lc"><div class="n" style="color:var(--gold)">98.4%</div><div class="l">Satisfaction</div></div>
+              </div>
+              <div class="lap-chart"><i style="height:40%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:82%"></i><i style="height:58%"></i><i style="height:72%"></i><i style="height:90%"></i><i style="height:60%"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="laptop-base"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec-pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><i class="fa-solid fa-tag"></i> Pricing</span>
+      <h2 class="h-section" style="margin-top:18px">Simple pricing that <span class="grad-text">scales with you</span></h2>
+      <p class="lead">Start free. Upgrade when you're ready. Cancel anytime, no questions asked.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price reveal">
+        <h3>Starter</h3>
+        <p class="desc">For individuals & small projects getting off the ground.</p>
+        <div class="amt">$0<span>/mo</span></div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Up to 3 projects</li>
+          <li><i class="fa-solid fa-check"></i> 10K API calls / month</li>
+          <li><i class="fa-solid fa-check"></i> Community support</li>
+          <li><i class="fa-solid fa-check"></i> Basic analytics</li>
+        </ul>
+        <a href="signup.html" class="btn btn-ghost">Get started</a>
+      </div>
+      <div class="price pop reveal">
+        <span class="badge">Most popular</span>
+        <h3>Growth</h3>
+        <p class="desc">For growing teams that need collaboration and scale.</p>
+        <div class="amt">$49<span>/mo</span></div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Unlimited projects</li>
+          <li><i class="fa-solid fa-check"></i> 1M API calls / month</li>
+          <li><i class="fa-solid fa-check"></i> Priority support</li>
+          <li><i class="fa-solid fa-check"></i> Advanced analytics</li>
+          <li><i class="fa-solid fa-check"></i> AI automation</li>
+        </ul>
+        <a href="signup.html" class="btn btn-primary">Start free trial</a>
+      </div>
+      <div class="price reveal">
+        <h3>Enterprise</h3>
+        <p class="desc">For organizations with custom security and scale needs.</p>
+        <div class="amt">Custom</div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Everything in Growth</li>
+          <li><i class="fa-solid fa-check"></i> Unlimited API calls</li>
+          <li><i class="fa-solid fa-check"></i> Dedicated architect</li>
+          <li><i class="fa-solid fa-check"></i> SSO & SAML</li>
+          <li><i class="fa-solid fa-check"></i> 99.99% SLA</li>
+        </ul>
+        <a href="contact.html" class="btn btn-ghost">Contact sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec-pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><i class="fa-solid fa-quote-left"></i> Testimonials</span>
+      <h2 class="h-section" style="margin-top:18px">Loved by teams <span class="grad-text">everywhere</span></h2>
+      <p class="lead">Don't take our word for it — here's what our customers say.</p>
+    </div>
+    <div class="tst-grid">
+      <div class="tst reveal">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"We replaced four separate tools with Stackly and cut our monthly costs by 60%. The team finally has one place to look."</p>
+        <div class="tst-user"><img loading="lazy" src="https://images.pexels.com/photos/33680700/pexels-photo-33680700.jpeg?auto=compress&cs=tinysrgb&h=120&w=120" alt="Amara Okafor" /><div><div class="n">Amara Okafor</div><div class="r">VP Engineering, Northwind</div></div></div>
+      </div>
+      <div class="tst reveal">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"The dashboards are gorgeous and the AI automation saved my team at least 10 hours a week. It just feels premium."</p>
+        <div class="tst-user"><img loading="lazy" src="https://images.pexels.com/photos/28442318/pexels-photo-28442318.jpeg?auto=compress&cs=tinysrgb&h=120&w=120" alt="Daniel Reyes" /><div><div class="n">Daniel Reyes</div><div class="r">Founder, Lumen Labs</div></div></div>
+      </div>
+      <div class="tst reveal">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"Onboarding took an afternoon. We passed our SOC 2 audit in weeks, not months, thanks to the built-in compliance controls."</p>
+        <div class="tst-user"><img loading="lazy" src="https://images.pexels.com/photos/8312669/pexels-photo-8312669.jpeg?auto=compress&cs=tinysrgb&h=120&w=120" alt="Sofia Marchetti" /><div><div class="n">Sofia Marchetti</div><div class="r">CTO, Brightpath</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec-pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+      <h2 class="h-section" style="margin-top:18px">Questions, <span class="grad-text">answered</span></h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq reveal"><div class="faq-head">Can I switch plans at any time?<span><i class="fa-solid fa-plus"></i></span></div><div class="faq-body"><p>Yes — upgrade or downgrade instantly from your dashboard. Changes prorate automatically, so you never pay for what you don't use.</p></div></div>
+      <div class="faq reveal"><div class="faq-head">Is there a free trial?<span><i class="fa-solid fa-plus"></i></span></div><div class="faq-body"><p>Every paid plan includes a 14-day free trial with no credit card required. You can explore all features before committing.</p></div></div>
+      <div class="faq reveal"><div class="faq-head">Do you offer discounts for startups?<span><i class="fa-solid fa-plus"></i></span></div><div class="faq-body"><p>Eligible early-stage startups get 50% off the Growth plan for the first year. Reach out via the contact page to apply.</p></div></div>
+      <div class="faq reveal"><div class="faq-head">How secure is my data?<span><i class="fa-solid fa-plus"></i></span></div><div class="faq-body"><p>All data is encrypted in transit and at rest with AES-256. We're SOC 2 Type II, GDPR, and HIPAA compliant, with quarterly third-party penetration testing.</p></div></div>
+      <div class="faq reveal"><div class="faq-head">Can I export my data?<span><i class="fa-solid fa-plus"></i></span></div><div class="faq-body"><p>Absolutely. Your data is yours — export everything to JSON or CSV at any time, with no lock-in.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec-pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band reveal z">
+      <h2>Ready to build something remarkable?</h2>
+      <p>Join 48,000+ teams shipping faster with SaaS Hub. Start your free trial today — no credit card required.</p>
+      <a href="signup.html" class="btn btn-white">Start free trial <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="contact.html" class="btn btn-ghost" style="background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.3)">Talk to sales</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo"><img src="/stackly-logo-violet.webp" alt="Stackly" class="site-logo" /></a>
+        <p>The premium cloud platform for modern teams. Build, ship, and scale — all in one beautifully designed workspace.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About us</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul><li><a href="login.html">Login</a></li><li><a href="signup.html">Sign up</a></li><li><a href="admin-dashboard.html">Admin</a></li><li><a href="client-dashboard.html">Client</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h4>Newsletter</h4>
+        <p style="color:var(--text-2);font-size:14px">Product updates and tips, monthly. No spam.</p>
+        <form class="foot-news" onsubmit="return subsNews(event)">
+          <input type="email" placeholder="Your email" required />
+          <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Stackly. All rights reserved. · 500 Market St, San Francisco · hello@saashub.com · +1 (415) 555-0142</p>
+      <div class="links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== STICKY HEADER ===== */
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));
+
+/* ===== MOBILE MENU ===== */
+const mm=document.getElementById('mobileMenu'),hm=document.getElementById('hamburger'),mc=document.getElementById('mmClose');
+function openMenu(){mm.classList.add('open');document.body.classList.add('locked')}
+function closeMenu(){mm.classList.remove('open');document.body.classList.remove('locked')}
+hm.addEventListener('click',openMenu);mc.addEventListener('click',closeMenu);
+mm.querySelector('.mm-bg').addEventListener('click',closeMenu);
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+
+/* ===== REVEAL ON SCROLL ===== */
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%6*60)+'ms';io.observe(el)});
+
+/* ===== COUNTERS ===== */
+function animateCount(el){
+  const target=parseFloat(el.dataset.count),suf=el.dataset.suffix||'',dec=(target%1!==0?1:0);
+  let start=null;const dur=1600;
+  function step(ts){if(!start)start=ts;const p=Math.min((ts-start)/dur,1);const e=1-Math.pow(1-p,3);
+    el.textContent=(target*e).toFixed(dec)+suf;if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step);
+}
+const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target)}})},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+/* ===== FAQ ===== */
+document.querySelectorAll('.faq').forEach(f=>f.querySelector('.faq-head').addEventListener('click',()=>f.classList.toggle('open')));
+
+/* ===== MOUSE GLOW ===== */
+const mg=document.getElementById('mouseGlow');
+addEventListener('mousemove',e=>{mg.style.left=e.clientX+'px';mg.style.top=e.clientY+'px'});
+if(matchMedia('(hover:none)').matches)mg.style.display='none';
+
+/* ===== NEWSLETTER ===== */
+function subsNews(e){e.preventDefault();e.target.reset();alert('Thanks for subscribing!');return false}
+</script>
+</body>
+</html>

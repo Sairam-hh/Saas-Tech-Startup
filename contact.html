@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — SaaS & Tech Startup</title>
+<meta name="description" content="Get in touch with the SaaS Hub team. Sales, support, and partnerships — we're here to help." />
+<meta name="keywords" content="contact saas hub, support, sales, email, phone" />
+<meta name="author" content="SaaS & Tech Startup" />
+<meta property="og:title" content="Contact SaaS Hub" />
+<meta property="og:description" content="Get in touch — we're here to help." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#FCFBF8;--bg-2:#F5F3EE;--glass:rgba(255,255,255,.58);
+  --text:#1B1B2F;--text-2:#5B6078;
+  --purple:#6D28D9;--violet:#8B5CF6;--gold:#D4A017;--peach:#FFB997;--mint:#4ADEC8;--lav:#D8B4FE;
+  --grad:linear-gradient(135deg,#6D28D9,#8B5CF6,#D4A017,#FFB997);
+  --grad-soft:linear-gradient(135deg,#8B5CF6,#6D28D9);
+  --shadow:0 20px 60px rgba(109,40,217,.12);--shadow-lg:0 40px 100px rgba(109,40,217,.18);
+  --r:24px;--r-sm:16px;--r-lg:32px;--max:1200px;
+  --err:#e5484d;--ok:#2da44e;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+body.locked{overflow:hidden}
+img{max-width:100%;display:block}a{text-decoration:none;color:inherit}ul{list-style:none}
+section{position:relative}::selection{background:var(--lav);color:var(--purple)}
+.aurora{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;animation:float 18s ease-in-out infinite}
+.blob.b1{width:520px;height:520px;background:radial-gradient(circle,#8B5CF6,transparent 70%);top:-120px;left:-100px}
+.blob.b2{width:480px;height:480px;background:radial-gradient(circle,#4ADEC8,transparent 70%);top:30%;right:-120px;animation-delay:-6s}
+.blob.b3{width:420px;height:420px;background:radial-gradient(circle,#FFB997,transparent 70%);bottom:-120px;left:30%;animation-delay:-12s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.08)}66%{transform:translate(-30px,30px) scale(.95)}}
+.mouse-glow{position:fixed;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.18),transparent 60%);pointer-events:none;z-index:-1;transform:translate(-50%,-50%);mix-blend-mode:multiply}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--purple);background:rgba(139,92,246,.1);padding:8px 16px;border-radius:100px;border:1px solid rgba(139,92,246,.2)}
+h1,h2,h3,h4{font-family:'Poppins',sans-serif;line-height:1.2;font-weight:700;letter-spacing:-.02em}
+.h-display{font-size:clamp(2.4rem,5.5vw,4rem);font-weight:800;line-height:1.08}
+.h-section{font-size:clamp(2rem,4vw,3rem);font-weight:700}
+.lead{font-size:clamp(1rem,1.4vw,1.2rem);color:var(--text-2);max-width:620px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.center{text-align:center}.center .lead{margin:20px auto 0}
+.sec-pad{padding:100px 0}.sec-head{max-width:680px;margin:0 auto 56px;text-align:center}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Plus Jakarta Sans';font-weight:600;font-size:15px;padding:14px 26px;border-radius:100px;border:none;cursor:pointer;transition:all .35s cubic-bezier(.2,.8,.2,1)}
+.btn-primary{background:var(--grad);color:#fff;background-size:200% 200%;box-shadow:0 12px 30px rgba(109,40,217,.35)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(109,40,217,.45);background-position:100% 50%}
+.btn-ghost{background:var(--glass);color:var(--text);border:1px solid rgba(109,40,217,.18);backdrop-filter:blur(12px)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--violet);box-shadow:0 12px 30px rgba(139,92,246,.2)}
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .4s}
+.nav{max-width:var(--max);margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;transition:all .4s}
+header.scrolled .nav{background:var(--glass);backdrop-filter:blur(20px);border-radius:100px;margin-top:14px;border:1px solid rgba(255,255,255,.6);box-shadow:0 10px 30px rgba(109,40,217,.1);padding:12px 22px}
+.logo{display:flex;align-items:center}
+.logo-mark{display:none}
+.site-logo{height:38px;width:auto;object-fit:contain;transition:opacity .3s}
+.site-logo:hover{opacity:.85}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{padding:10px 16px;border-radius:100px;font-weight:500;font-size:15px;color:var(--text-2);position:relative;transition:all .3s}
+.nav-links a::after{content:'';position:absolute;left:16px;right:16px;bottom:6px;height:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.nav-links a:hover{color:var(--purple)}.nav-links a:hover::after{transform:scaleX(1)}
+.nav-links a.active{color:var(--purple)}.nav-links a.active::after{transform:scaleX(1)}
+.nav-cta{display:flex;align-items:center;gap:10px}.nav-cta .btn{padding:11px 22px;font-size:14px}
+.hamburger{display:none;background:var(--glass);border:1px solid rgba(109,40,217,.18);width:46px;height:46px;border-radius:14px;cursor:pointer;color:var(--purple);font-size:18px;backdrop-filter:blur(10px)}
+.mobile-menu{position:fixed;inset:0;z-index:200;transform:translateX(100%);transition:transform .45s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}
+.mobile-menu.open{transform:translateX(0)}
+.mm-bg{position:absolute;inset:0;background:rgba(252,251,248,.85);backdrop-filter:blur(24px)}
+.mm-card{position:relative;margin:18px;width:calc(100% - 36px);background:#fff;border-radius:var(--r-lg);padding:28px;box-shadow:var(--shadow-lg);border:1px solid rgba(109,40,217,.1);overflow-y:auto}
+.mm-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.mm-close{width:44px;height:44px;border-radius:12px;border:1px solid rgba(109,40,217,.18);background:var(--bg-2);color:var(--purple);font-size:18px;cursor:pointer}
+.mm-links{display:flex;flex-direction:column;gap:6px}
+.mm-links a{padding:14px 16px;border-radius:14px;font-weight:500;font-size:17px;color:var(--text);transition:all .3s}
+.mm-links a:hover{background:var(--bg-2);color:var(--purple);padding-left:22px}
+.mm-cta{display:flex;flex-direction:column;gap:10px;margin-top:20px}.mm-cta .btn{justify-content:center;width:100%}
+.page-hero{padding:160px 0 70px;text-align:center}
+.page-hero .lead{margin:20px auto 0}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.form-card{background:var(--glass);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-lg);padding:40px;box-shadow:var(--shadow)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:20px}
+.field label{display:block;font-weight:600;font-size:14px;margin-bottom:8px}
+.field input,.field textarea,.field select{width:100%;padding:14px 18px;border-radius:14px;border:1.5px solid rgba(109,40,217,.15);background:#fff;font-family:inherit;font-size:15px;color:var(--text);outline:none;transition:all .3s}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--violet);box-shadow:0 0 0 4px rgba(139,92,246,.12)}
+.field textarea{resize:vertical;min-height:120px}
+.err-msg{display:none;align-items:center;gap:8px;color:var(--err);font-size:13px;margin-top:6px;animation:shake .4s}
+.err-msg.show{display:flex}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.field.invalid input,.field.invalid textarea{border-color:var(--err)}
+.form-card .btn{width:100%;justify-content:center;margin-top:6px}
+.info-side{display:flex;flex-direction:column;gap:18px}
+.info-card{background:#fff;border-radius:var(--r);padding:26px;border:1px solid rgba(109,40,217,.08);box-shadow:var(--shadow);transition:all .3s}
+.info-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.info-card .ic{width:48px;height:48px;border-radius:14px;background:var(--grad-soft);display:grid;place-items:center;color:#fff;font-size:18px;margin-bottom:14px}
+.info-card h4{font-size:1.1rem;margin-bottom:6px}
+.info-card p{color:var(--text-2);font-size:14px}
+.map-card{border-radius:var(--r);overflow:hidden;border:1px solid rgba(109,40,217,.08);box-shadow:var(--shadow);height:240px}
+.map-card iframe{width:100%;height:100%;border:0;filter:grayscale(.1)}
+.support-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.sup-card{background:var(--glass);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.7);border-radius:var(--r);padding:30px;text-align:center;transition:all .4s}
+.sup-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.sup-ic{width:56px;height:56px;border-radius:16px;background:var(--grad-soft);display:grid;place-items:center;color:#fff;font-size:22px;margin:0 auto 16px}
+.sup-card h4{font-size:1.15rem;margin-bottom:6px}.sup-card p{color:var(--text-2);font-size:14px}
+.faq-wrap{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq{background:var(--glass);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-sm);overflow:hidden;transition:all .3s}
+.faq-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;cursor:pointer;font-weight:600;font-size:16px}
+.faq-head i{color:var(--purple);transition:transform .3s}
+.faq.open .faq-head i{transform:rotate(45deg)}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .4s ease;padding:0 24px}
+.faq.open .faq-body{max-height:200px;padding-bottom:22px}
+.faq-body p{color:var(--text-2);font-size:15px}
+.cta-band{background:var(--grad);border-radius:var(--r-lg);padding:70px 50px;text-align:center;color:#fff;position:relative;overflow:hidden;background-size:200% 200%;animation:shift 8s ease infinite}
+@keyframes shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.cta-band h2{color:#fff;font-size:clamp(2rem,4vw,2.8rem);margin-bottom:16px}
+.cta-band p{font-size:1.1rem;opacity:.92;max-width:560px;margin:0 auto 30px}
+.cta-band .btn-white{background:#fff;color:var(--purple);box-shadow:0 8px 24px rgba(27,27,47,.1)}
+.cta-band .btn-white:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(27,27,47,.16)}
+footer{background:var(--bg-2);padding:70px 0 30px;position:relative;border-top:1px solid rgba(109,40,217,.08)}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-brand .logo{margin-bottom:16px}.foot-brand p{color:var(--text-2);font-size:14px;max-width:300px;margin-bottom:20px}
+.foot-social{display:flex;gap:10px}
+.foot-social a{width:42px;height:42px;border-radius:12px;background:#fff;border:1px solid rgba(109,40,217,.1);display:grid;place-items:center;color:var(--purple);transition:all .35s}
+.foot-social a:hover{background:var(--grad);color:#fff;transform:translateY(-4px);box-shadow:0 10px 24px rgba(109,40,217,.3)}
+.foot-col h4{font-size:15px;margin-bottom:18px}
+.foot-col ul{display:flex;flex-direction:column;gap:10px}
+.foot-col ul a{color:var(--text-2);font-size:14px;transition:all .3s}
+.foot-col ul a:hover{color:var(--purple);padding-left:6px}
+.foot-news{display:flex;gap:8px;margin-top:14px}
+.foot-news input{flex:1;padding:12px 16px;border-radius:100px;border:1px solid rgba(109,40,217,.18);background:#fff;font-family:inherit;font-size:14px;outline:none}
+.foot-news input:focus{border-color:var(--violet)}
+.foot-news button{width:46px;height:46px;border-radius:50%;background:var(--grad);color:#fff;border:none;cursor:pointer;flex-shrink:0;transition:transform .3s}
+.foot-news button:hover{transform:scale(1.08)}
+.foot-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:26px;border-top:1px solid rgba(109,40,217,.1);flex-wrap:wrap;gap:14px}
+.foot-bottom p{color:var(--text-2);font-size:13px}
+.foot-bottom .links{display:flex;gap:22px}
+.foot-bottom .links a{color:var(--text-2);font-size:13px;transition:color .3s}
+.foot-bottom .links a:hover{color:var(--purple)}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.l{transform:translateX(-50px)}.reveal.r{transform:translateX(50px)}.reveal.z{transform:scale(.9)}
+.reveal.in.l,.reveal.in.r,.reveal.in.z{transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media(max-width:980px){
+  .contact-grid{grid-template-columns:1fr}
+  .support-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:30px}
+}
+@media(max-width:680px){
+  .nav-links,.nav-cta{display:none}.hamburger{display:grid;place-items:center}
+  .form-row{grid-template-columns:1fr}
+  .sec-pad{padding:70px 0}.page-hero{padding:130px 0 50px}
+  .cta-band{padding:50px 26px}.foot-grid{grid-template-columns:1fr;gap:28px}
+  .foot-bottom{flex-direction:column;text-align:center}
+}
+/* success popup */
+.popup{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;background:rgba(27,27,47,.5);backdrop-filter:blur(8px);padding:24px}
+.popup.show{display:flex;animation:fadeIn .3s}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.popup-card{background:#fff;border-radius:var(--r-lg);padding:44px 36px;max-width:420px;text-align:center;box-shadow:var(--shadow-lg);animation:popIn .4s cubic-bezier(.2,.8,.2,1)}
+@keyframes popIn{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+.popup-ic{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#4ADEC8,#2da44e);display:grid;place-items:center;color:#fff;font-size:36px;margin:0 auto 20px;animation:bounce .6s .2s both}
+@keyframes bounce{0%{transform:scale(0)}60%{transform:scale(1.15)}100%{transform:scale(1)}}
+.popup-card h3{font-size:1.5rem;margin-bottom:8px}
+.popup-card p{color:var(--text-2);margin-bottom:24px}
+</style>
+</head>
+<body>
+<div class="aurora"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="mouse-glow" id="mouseGlow"></div>
+
+<header id="header">
+  <nav class="nav">
+    <a href="index.html" class="logo"><img src="/stackly-logo-violet.webp" alt="Stackly" class="site-logo" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="login.html" class="btn btn-ghost">Login</a>
+      <a href="signup.html" class="btn btn-primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-bg"></div>
+  <div class="mm-card">
+    <div class="mm-head">
+      <a href="index.html" class="logo"><img src="/stackly-logo-violet.webp" alt="Stackly" class="site-logo" /></a>
+      <button class="mm-close" id="mmClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mm-links">
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+      <li><a href="services.html"><i class="fa-solid fa-layer-group"></i> Services</a></li>
+      <li><a href="pricing.html"><i class="fa-solid fa-tag"></i> Pricing</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+    </ul>
+    <div class="mm-cta">
+      <a href="login.html" class="btn btn-ghost">Login</a>
+      <a href="signup.html" class="btn btn-primary">Get Started</a>
+    </div>
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow reveal"><i class="fa-solid fa-envelope"></i> Contact</span>
+    <h1 class="h-display reveal" style="margin-top:18px">Let's <span class="grad-text">talk</span></h1>
+    <p class="lead reveal">Whether you're evaluating, onboarding, or scaling — our team is ready to help. Reach out and we'll respond within one business day.</p>
+  </div>
+</section>
+
+<section class="sec-pad" style="padding-top:20px">
+  <div class="wrap">
+    <div class="contact-grid">
+      <form class="form-card reveal l" id="contactForm" novalidate>
+        <h2 style="font-size:1.5rem;margin-bottom:6px">Send us a message</h2>
+        <p style="color:var(--text-2);font-size:14px;margin-bottom:24px">Fill out the form and we'll be in touch shortly.</p>
+        <div class="form-row">
+          <div class="field" id="f-name">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" />
+            <div class="err-msg"><i class="fa-solid fa-circle-exclamation"></i> <span></span></div>
+          </div>
+          <div class="field" id="f-email">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" />
+            <div class="err-msg"><i class="fa-solid fa-circle-exclamation"></i> <span></span></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field" id="f-phone">
+            <label for="phone">Phone (optional)</label>
+            <input type="text" id="phone" name="phone" placeholder="+1 (415) 555-0142" />
+            <div class="err-msg"><i class="fa-solid fa-circle-exclamation"></i> <span></span></div>
+          </div>
+          <div class="field" id="f-subject">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a topic</option>
+              <option>Sales inquiry</option>
+              <option>Technical support</option>
+              <option>Partnership</option>
+              <option>General question</option>
+            </select>
+            <div class="err-msg"><i class="fa-solid fa-circle-exclamation"></i> <span></span></div>
+          </div>
+        </div>
+        <div class="field" id="f-message">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us how we can help..."></textarea>
+          <div class="err-msg"><i class="fa-solid fa-circle-exclamation"></i> <span></span></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Send message <i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+      <div class="info-side reveal r">
+        <div class="info-card">
+          <div class="ic"><i class="fa-solid fa-location-dot"></i></div>
+          <h4>Visit us</h4>
+          <p>500 Market Street, Suite 1200<br />San Francisco, CA 94105</p>
+        </div>
+        <div class="info-card">
+          <div class="ic" style="background:linear-gradient(135deg,#D4A017,#FFB997)"><i class="fa-solid fa-envelope"></i></div>
+          <h4>Email us</h4>
+          <p>hello@saashub.com<br />support@saashub.com</p>
+        </div>
+        <div class="info-card">
+          <div class="ic" style="background:linear-gradient(135deg,#4ADEC8,#8B5CF6)"><i class="fa-solid fa-phone"></i></div>
+          <h4>Call us</h4>
+          <p>+1 (415) 555-0142<br />Mon–Fri, 9am–6pm PT</p>
+        </div>
+        <div class="info-card">
+          <div class="ic"><i class="fa-solid fa-clock"></i></div>
+          <h4>Working hours</h4>
+          <p>Monday – Friday: 9am – 6pm<br />Saturday: 10am – 2pm<br />Sunday: Closed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="map-card reveal"><iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-122.42%2C37.77%2C-122.39%2C37.79&layer=mapnik" title="Our location"></iframe></div>
+  </div>
+</section>
+
+<section class="sec-pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><i class="fa-solid fa-headset"></i> Get in touch</span>
+      <h2 class="h-section" style="margin-top:18px">How can we <span class="grad-text">help?</span></h2>
+    </div>
+    <div class="support-grid">
+      <div class="sup-card reveal"><div class="sup-ic"><i class="fa-solid fa-comments"></i></div><h4>Sales</h4><p>Talk to our team about pricing, plans, and demos for your team.</p></div>
+      <div class="sup-card reveal"><div class="sup-ic" style="background:linear-gradient(135deg,#D4A017,#FFB997)"><i class="fa-solid fa-wrench"></i></div><h4>Support</h4><p>Get technical help from engineers — 24/7 for Enterprise customers.</p></div>
+      <div class="sup-card reveal"><div class="sup-ic" style="background:linear-gradient(135deg,#4ADEC8,#8B5CF6)"><i class="fa-solid fa-handshake"></i></div><h4>Partnerships</h4><p>Explore integrations, co-marketing, and channel opportunities.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+      <h2 class="h-section" style="margin-top:18px">Quick <span class="grad-text">answers</span></h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq reveal"><div class="faq-head">How fast do you respond?<span><i class="fa-solid fa-plus"></i></span></div><div class="faq-body"><p>Within one business day for sales, and within 2 minutes for Enterprise support chat.</p></div></div>
+      <div class="faq reveal"><div class="faq-head">Do you offer onboarding help?<span><i class="fa-solid fa-plus"></i></span></div><div class="faq-body"><p>Yes — Growth and Enterprise plans include guided onboarding with a dedicated specialist.</p></div></div>
+      <div class="faq reveal"><div class="faq-head">Can I schedule a demo?<span><i class="fa-solid fa-plus"></i></span></div><div class="faq-body"><p>Absolutely. Select "Sales inquiry" in the form above and we'll set up a tailored demo.</p></div></div>
+      <div class="faq reveal"><div class="faq-head">Where are you located?<span><i class="fa-solid fa-plus"></i></span></div><div class="faq-body"><p>Our HQ is at 500 Market Street, San Francisco, with remote team members across 40+ countries.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band reveal z">
+      <h2>Ready to get started?</h2>
+      <p>Join 48,000+ teams building faster with SaaS Hub. Start your free trial today.</p>
+      <a href="signup.html" class="btn btn-white">Start free trial <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo"><img src="/stackly-logo-violet.webp" alt="Stackly" class="site-logo" /></a>
+        <p>The premium cloud platform for modern teams. Build, ship, and scale — all in one beautifully designed workspace.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="foot-col"><h4>Company</h4><ul><li><a href="about.html">About us</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="foot-col"><h4>Quick Links</h4><ul><li><a href="login.html">Login</a></li><li><a href="signup.html">Sign up</a></li><li><a href="admin-dashboard.html">Admin</a></li><li><a href="client-dashboard.html">Client</a></li></ul></div>
+      <div class="foot-col">
+        <h4>Newsletter</h4>
+        <p style="color:var(--text-2);font-size:14px">Product updates and tips, monthly. No spam.</p>
+        <form class="foot-news" onsubmit="return subsNews(event)">
+          <input type="email" placeholder="Your email" required />
+          <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Stackly. All rights reserved. · 500 Market St, San Francisco · hello@saashub.com · +1 (415) 555-0142</p>
+      <div class="links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="popup" id="popup">
+  <div class="popup-card">
+    <div class="popup-ic"><i class="fa-solid fa-check"></i></div>
+    <h3>Message sent!</h3>
+    <p>Thanks for reaching out. Our team will get back to you within one business day.</p>
+    <button class="btn btn-primary" onclick="closePopup()">Done</button>
+  </div>
+</div>
+
+<script>
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));
+const mm=document.getElementById('mobileMenu'),hm=document.getElementById('hamburger'),mc=document.getElementById('mmClose');
+function openMenu(){mm.classList.add('open');document.body.classList.add('locked')}
+function closeMenu(){mm.classList.remove('open');document.body.classList.remove('locked')}
+hm.addEventListener('click',openMenu);mc.addEventListener('click',closeMenu);
+mm.querySelector('.mm-bg').addEventListener('click',closeMenu);
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%6*60)+'ms';io.observe(el)});
+document.querySelectorAll('.faq').forEach(f=>f.querySelector('.faq-head').addEventListener('click',()=>f.classList.toggle('open')));
+const mg=document.getElementById('mouseGlow');
+addEventListener('mousemove',e=>{mg.style.left=e.clientX+'px';mg.style.top=e.clientY+'px'});
+if(matchMedia('(hover:none)').matches)mg.style.display='none';
+function subsNews(e){e.preventDefault();e.target.reset();alert('Thanks for subscribing!');return false}
+
+/* ===== FORM VALIDATION ===== */
+function setError(fieldId,msg){
+  const f=document.getElementById(fieldId);f.classList.add('invalid');
+  const em=f.querySelector('.err-msg');em.querySelector('span').textContent=msg;em.classList.add('show');
+}
+function clearError(fieldId){const f=document.getElementById(fieldId);f.classList.remove('invalid');f.querySelector('.err-msg').classList.remove('show')}
+document.querySelectorAll('input,textarea,select').forEach(el=>el.addEventListener('input',()=>clearError(el.closest('.field').id)));
+
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  let ok=true;
+  const name=document.getElementById('name').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const subject=document.getElementById('subject').value;
+  const message=document.getElementById('message').value.trim();
+
+  if(!name){setError('f-name','Please enter your full name.');ok=false}
+  else if(!/^[A-Za-z\s]+$/.test(name)){setError('f-name','Only alphabets are allowed in your name.');ok=false}
+  else clearError('f-name');
+
+  if(!email){setError('f-email','Please enter your email.');ok=false}
+  else if(!/^[^\s@]+@[^\s@]+\.(com|in|org)$/i.test(email)){setError('f-email','Email must end with .com, .in, or .org');ok=false}
+  else clearError('f-email');
+
+  if(phone&&!/^[\d\s+()-]+$/.test(phone)){setError('f-phone','Please enter a valid phone number.');ok=false}
+  else clearError('f-phone');
+
+  if(!subject){setError('f-subject','Please select a subject.');ok=false}
+  else clearError('f-subject');
+
+  if(!message){setError('f-message','Please enter a message.');ok=false}
+  else clearError('f-message');
+
+  if(ok){document.getElementById('popup').classList.add('show');this.reset()}
+});
+function closePopup(){document.getElementById('popup').classList.remove('show')}
+</script>
+</body>
+</html>

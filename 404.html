@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>404 — Page Not Found | SaaS & Tech Startup</title>
+<meta name="description" content="The page you're looking for doesn't exist." />
+<meta name="author" content="SaaS & Tech Startup" />
+<meta name="robots" content="noindex" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#FCFBF8;--bg-2:#F5F3EE;--glass:rgba(255,255,255,.58);
+  --text:#1B1B2F;--text-2:#5B6078;
+  --purple:#6D28D9;--violet:#8B5CF6;--gold:#D4A017;--peach:#FFB997;--mint:#4ADEC8;--lav:#D8B4FE;
+  --grad:linear-gradient(135deg,#6D28D9,#8B5CF6,#D4A017,#FFB997);
+  --grad-soft:linear-gradient(135deg,#8B5CF6,#6D28D9);
+  --shadow:0 20px 60px rgba(109,40,217,.12);--shadow-lg:0 40px 100px rgba(109,40,217,.18);
+  --r:24px;--r-lg:32px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px}
+a{text-decoration:none;color:inherit}
+.aurora{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;animation:float 18s ease-in-out infinite}
+.blob.b1{width:520px;height:520px;background:radial-gradient(circle,#8B5CF6,transparent 70%);top:-120px;left:-100px}
+.blob.b2{width:480px;height:480px;background:radial-gradient(circle,#4ADEC8,transparent 70%);bottom:-120px;right:-120px;animation-delay:-6s}
+.blob.b3{width:420px;height:420px;background:radial-gradient(circle,#FFB997,transparent 70%);top:40%;left:40%;animation-delay:-12s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.08)}66%{transform:translate(-30px,30px) scale(.95)}}
+h1,h2,h3{font-family:'Poppins',sans-serif;line-height:1.2;font-weight:700;letter-spacing:-.02em}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo{display:flex;align-items:center}
+.site-logo{height:42px;width:auto;object-fit:contain;transition:opacity .3s;margin-bottom:32px}
+.site-logo:hover{opacity:.85}
+.card{width:100%;max-width:560px;background:var(--glass);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-lg);padding:56px 40px;box-shadow:var(--shadow-lg);text-align:center;position:relative;animation:floatCard 6s ease-in-out infinite}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.err-code{font-family:'Poppins';font-size:clamp(6rem,18vw,10rem);font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;margin-bottom:8px;animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.04);opacity:.9}}
+.card h2{font-size:1.6rem;margin-bottom:12px}
+.card p{color:var(--text-2);font-size:1.05rem;max-width:420px;margin:0 auto 32px}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Plus Jakarta Sans';font-weight:600;font-size:15px;padding:14px 26px;border-radius:100px;border:none;cursor:pointer;transition:all .35s cubic-bezier(.2,.8,.2,1)}
+.btn-primary{background:var(--grad);color:#fff;background-size:200% 200%;box-shadow:0 12px 30px rgba(109,40,217,.35)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(109,40,217,.45);background-position:100% 50%}
+.btn-ghost{background:#fff;color:var(--text);border:1px solid rgba(109,40,217,.15)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--violet);box-shadow:0 12px 30px rgba(139,92,246,.2)}
+.float-shape{position:absolute;border-radius:50%;opacity:.6;animation:bob 5s ease-in-out infinite}
+.fs1{width:50px;height:50px;background:radial-gradient(circle,#8B5CF6,transparent 70%);top:20px;right:30px;filter:blur(2px)}
+.fs2{width:40px;height:40px;background:radial-gradient(circle,#4ADEC8,transparent 70%);bottom:40px;left:20px;filter:blur(2px);animation-delay:-2.5s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+</style>
+</head>
+<body>
+<div class="aurora"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+<div class="card">
+  <div class="float-shape fs1"></div>
+  <div class="float-shape fs2"></div>
+  <a href="index.html" class="logo"><img src="/stackly-logo-violet.webp" alt="Stackly" class="site-logo" /></a>
+  <div class="err-code">404</div>
+  <h2>Page not found</h2>
+  <p>The page you're looking for seems to have drifted off into the cloud. Let's get you back on track.</p>
+  <div class="btns">
+    <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-house"></i> Go home</a>
+    <a href="javascript:history.back()" class="btn btn-ghost"><i class="fa-solid fa-arrow-left"></i> Go back</a>
+  </div>
+</div>
+</body>
+</html>
