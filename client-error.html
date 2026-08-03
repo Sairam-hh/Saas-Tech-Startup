@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Create account · stackly</title>
-<meta name="description" content="Start a 14-day Stackly trial. Create your workspace, pick admin or client access and deploy your first agent in 90 seconds.">
-<meta property="og:title" content="Create account · Stackly">
-<meta property="og:description" content="Start a 14-day Stackly trial. Create your workspace, pick admin or client access and deploy your first agent in 90 seconds.">
+<title>404 · Page not found | stackly</title>
+<meta name="description" content="The page you were looking for has moved or no longer exists. Head back to the stackly homepage.">
+<meta property="og:title" content="404 · Page not found | stackly">
+<meta property="og:description" content="The page you were looking for has moved or no longer exists. Head back to the stackly homepage.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico">
@@ -49,25 +49,10 @@ img{max-width:100%;display:block}
 /* grid noise */
 .grid-lines{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:70px 70px;mask-image:radial-gradient(circle at 50% 20%,#000,transparent 78%)}
 /* header */
-header.site{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 60;
-    transition: .35s;
-}
-header.site .bar{height:78px;overflow:visible;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 22px;margin-top:16px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(18px);border-radius:20px;box-shadow:0 20px 50px -35px rgba(0,0,0,.9)}
+header.site{position:sticky;top:0;z-index:60;transition:.35s}
+header.site .bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 22px;margin-top:16px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(18px);border-radius:20px;box-shadow:0 20px 50px -35px rgba(0,0,0,.9)}
 header.site.scrolled .bar{background:rgba(10,7,20,.82);box-shadow:0 24px 60px -30px rgba(155,92,255,.45)}
-.logo{display:flex;align-items:center;gap:10px;flex-shrink:0;height:100%}
-.logo img{
-    height: 100px;
-    width: auto;
-    transform: scale(1.35);   /* Logo visually peddaga */
-    transform-origin: left center;
-    object-fit: contain;
-    pointer-events: none;
-}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .logo-mark{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:rgba(155,92,255,.12);border:1px solid var(--line);box-shadow:0 0 26px rgba(155,92,255,.35)}
 .logo-text{font-family:"Sora",sans-serif;font-weight:700;color:#fff;font-size:1.1rem;letter-spacing:-.02em}
 .logo-text em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -147,84 +132,22 @@ footer ul a:hover{color:#fff;transform:translateX(5px);text-shadow:0 0 18px rgba
 .ok-msg.show{display:block}
 @media(max-width:1000px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}.f-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:820px){nav.main,.head-cta{display:none}.burger{display:grid}section{padding:70px 0}.g2,.g3,.g4{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr}}
-
-body{min-height:100vh}
-.authbg{position:fixed;inset:0;z-index:-3;background:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;}
-.authbg::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(7,4,15,.94),rgba(15,10,31,.86) 55%,rgba(7,4,15,.92))}
-.auth-shell{min-height:100vh;display:grid;grid-template-columns:60% 40%;gap:0}
-.auth-left{padding:56px 5vw;display:flex;flex-direction:column;justify-content:center;gap:26px}
-.auth-right{padding:40px 4vw;display:grid;place-items:center}
-.auth-card{width:min(470px,100%);padding:34px;border-radius:28px;background:rgba(18,18,30,.62);border:1px solid var(--line);backdrop-filter:blur(26px);box-shadow:0 40px 110px -40px rgba(155,92,255,.85)}
-.auth-card::before{content:"";position:absolute}
-.roles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
-.role{cursor:pointer;text-align:center;padding:18px 10px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03);transition:.35s}
-.role .emo{font-size:1.7rem;display:block;margin-bottom:6px}
-.role strong{color:#fff;font-size:.95rem}
-.role:hover{transform:translateY(-4px);border-color:rgba(60,242,255,.4)}
-.role.active{border-color:transparent;background:linear-gradient(135deg,rgba(155,92,255,.25),rgba(255,94,168,.18));box-shadow:0 0 0 1px rgba(255,94,168,.6),0 18px 46px -18px rgba(255,94,168,.9)}
-.row{display:flex;justify-content:space-between;align-items:center;font-size:.85rem;color:var(--muted);margin:6px 0 18px;gap:12px;flex-wrap:wrap}
-.row a{color:var(--hi)}
-.divider{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.8rem;margin:20px 0}
-.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
-.soc{display:flex;gap:10px;justify-content:center}
-.soc a{width:48px;height:48px;border-radius:14px;border:1px solid var(--line);display:grid;place-items:center;background:rgba(255,255,255,.03);transition:.3s}
-.soc a:hover{transform:translateY(-5px);background:var(--grad)}
-.soc svg{width:18px;height:18px;fill:#fff}
-.shape{position:absolute;border-radius:32px;border:1px solid var(--line);background:rgba(255,255,255,.03);animation:float 12s ease-in-out infinite;z-index:-1}
-.mini{display:flex;gap:14px;flex-wrap:wrap}
-.mini .glass{padding:14px 18px;border-radius:16px}
-.feat3{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
-.feat3 .glass{padding:18px}
-.parts{position:absolute;inset:0;overflow:hidden;z-index:-1;pointer-events:none}
-.parts i{position:absolute;width:4px;height:4px;border-radius:50%;background:#3CF2FF;opacity:.5;animation:rise linear infinite}
-@keyframes rise{from{transform:translateY(0);opacity:0}10%{opacity:.6}to{transform:translateY(-100vh);opacity:0}}
-.auth-logo{margin-bottom:18px}
-@media(max-width:960px){.auth-shell{grid-template-columns:1fr}.auth-left{display:none}.auth-right{padding:32px 20px;min-height:100vh}.auth-card{width:min(440px,100%)}}
-</style>
+.e404{min-height:100vh;display:grid;place-items:center;padding:40px 20px}.big{font-family:'Sora';font-size:clamp(6rem,22vw,14rem);font-weight:800;line-height:.9;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 20px 60px rgba(155,92,255,.6));animation:float 8s ease-in-out infinite}</style>
 </head>
 <body>
 <div class="aurora"></div><div class="grid-lines"></div>
 <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
 
-<div class="parts"><i style="left:6%;bottom:-10px;animation-duration:14s;animation-delay:-0s"></i><i style="left:18%;bottom:-10px;animation-duration:18s;animation-delay:-3s"></i><i style="left:31%;bottom:-10px;animation-duration:12s;animation-delay:-6s"></i><i style="left:44%;bottom:-10px;animation-duration:20s;animation-delay:-2s"></i><i style="left:57%;bottom:-10px;animation-duration:15s;animation-delay:-9s"></i><i style="left:69%;bottom:-10px;animation-duration:17s;animation-delay:-4s"></i><i style="left:82%;bottom:-10px;animation-duration:13s;animation-delay:-7s"></i><i style="left:93%;bottom:-10px;animation-duration:19s;animation-delay:-1s"></i><i style="left:25%;bottom:-10px;animation-duration:16s;animation-delay:-11s"></i><i style="left:75%;bottom:-10px;animation-duration:14s;animation-delay:-5s"></i></div><div class="auth-shell">
-<div class="auth-left">
-<div class="reveal in">
-  <a class="logo" href="/index.html" aria-label="stackly home">
-  <img src="./gellery/stackly-logo-gradient.webp" alt="Stackly logo">
-</a>
-</div>
-<h1 class="reveal in" style="max-width:640px">Your first agent goes live <span class='grad-text'>this week</span>.</h1>
-<p class="reveal in" style="max-width:520px;font-size:1.05rem">Create a workspace, connect one system, and watch a workflow disappear. No card required for 14 days.</p>
-<div class="feat3 reveal in"><div class="glass"><div style="font-size:1.4rem">🚀</div><strong style="color:#fff;display:block;margin-top:6px">14-day trial</strong><span class="muted" style="font-size:.84rem">25k free actions</span></div><div class="glass"><div style="font-size:1.4rem">🧠</div><strong style="color:#fff;display:block;margin-top:6px">Live onboarding</strong><span class="muted" style="font-size:.84rem">With a real architect</span></div><div class="glass"><div style="font-size:1.4rem">🔓</div><strong style="color:#fff;display:block;margin-top:6px">No lock-in</strong><span class="muted" style="font-size:.84rem">Export anytime</span></div></div>
-<div class="mini reveal in"><div class="glass"><div class="stat-num" style="font-size:1.6rem"><span data-count="14" data-suffix="d">0</span></div><div class="muted" style="font-size:.82rem">Free trial</div></div><div class="glass"><div class="stat-num" style="font-size:1.6rem"><span data-count="90" data-suffix="s">0</span></div><div class="muted" style="font-size:.82rem">To first agent</div></div><div class="glass"><div class="stat-num" style="font-size:1.6rem"><span data-count="4.9" data-suffix="">0</span></div><div class="muted" style="font-size:.82rem">Customer rating</div></div></div>
-<div class="glass reveal in" style="border-radius:24px;overflow:hidden;max-width:520px"><img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=900&q=80" alt="AI illustration" style="aspect-ratio:16/7;object-fit:cover"></div>
-<div class="shape" style="width:190px;height:190px;right:12%;top:8%"></div>
-<div class="shape" style="width:120px;height:120px;right:32%;bottom:10%;animation-delay:-4s"></div>
-</div>
-<div class="auth-right"><div class="auth-card">
-<div class="auth-logo">
-  <a class="logo" href="/index.html" aria-label="stackly home">
-  <img src="./gellery/stackly-logo-gradient.webp" alt="Stackly logo">
-</a>
-</div>
-<h2 style="font-size:1.7rem">Create your account</h2>
-<p class="muted">Pick your access level to get started.</p>
-<div class="roles" id="roles">
-<div class="role active" data-role="admin"><span class="emo">👑</span><strong>Admin</strong></div>
-<div class="role" data-role="client"><span class="emo">💼</span><strong>Client</strong></div></div>
-<form id="signupForm" novalidate>
-<div class="field"><label for="fn">Full name</label><input id="fn" type="text" placeholder="Amara Okonkwo"><div class="err" id="e-fn">Alphabets and spaces only.</div></div>
-<div class="field"><label for="em">Email</label><input id="em" type="text" placeholder="you@company.com"><div class="err" id="e-em">Use a valid email ending in .com, .in or .org</div></div>
-<div class="field"><label for="pw">Password</label><input id="pw" type="password" placeholder="At least 6 characters"><div class="err" id="e-pw">Password must be at least 6 characters.</div></div>
-<div class="field"><label for="cp">Confirm password</label><input id="cp" type="password" placeholder="Repeat password"><div class="err" id="e-cp">Passwords do not match.</div></div>
-<div class="row"><label style="display:flex;gap:8px;align-items:flex-start;color:var(--para)"><input type="checkbox" id="tc" style="width:auto;accent-color:#9B5CFF;margin-top:4px"> I agree to the Terms & Privacy Policy</label></div>
-<div class="err" id="e-tc" style="margin-top:-10px">Please accept the terms to continue.</div>
-<button class="btn btn-primary" style="width:100%;margin-top:12px" type="submit">Create account</button>
-<a class="btn btn-ghost" style="width:100%;margin-top:10px" href="/index.html">Go home</a>
-</form>
-<div class="divider">or sign up with</div><div class="soc"><a href="404.html"><svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4.9V24H.5zM8.5 8h4.7v2.2h.07c.65-1.2 2.23-2.5 4.6-2.5 4.9 0 5.8 3.2 5.8 7.4V24h-4.9v-7.4c0-1.8 0-4-2.5-4s-2.9 1.9-2.9 3.9V24H8.5z"/></svg></a><a href="404.html"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.7 4.7 18.7 5 18.7 5c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></a><a href="404.html"><svg viewBox="0 0 24 24"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2a9.7 9.7 0 0 0 3-7.4zM12 22a9.5 9.5 0 0 0 6.6-2.4l-3.2-2.5a6 6 0 0 1-8.9-3.1H3.2v2.6A10 10 0 0 0 12 22zM6.5 14a5.9 5.9 0 0 1 0-3.8V7.6H3.2a10 10 0 0 0 0 8.9zM12 5.9a5.4 5.4 0 0 1 3.8 1.5l2.8-2.8A9.6 9.6 0 0 0 12 2a10 10 0 0 0-8.8 5.6l3.3 2.6A6 6 0 0 1 12 5.9z"/></svg></a><a href="404.html"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.3 8.3L23.2 22h-6.7l-5.2-6.8L5.3 22H2.2l7.8-8.9L1.2 2h6.9l4.7 6.2zm-1.1 18h1.7L7.3 3.7H5.5z"/></svg></a></div>
-<p class="muted" style="text-align:center;margin-top:18px">Already have an account? <a href="/login.html" style="color:var(--hi)">Sign in</a></p>
-</div></div></div>
+
+<div class="e404"><div class="glass reveal in" style="padding:56px;text-align:center;max-width:640px;border-radius:32px">
+<span class="eyebrow"><span class="dot"></span>Error 404</span>
+<div class="big">404</div>
+<h2>This route drifted out of orbit</h2>
+<p>The page you're after was moved, renamed, or never existed. Our agents are already looking.</p>
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px">
+<a class="btn btn-primary" href="client.html">Go to Dashboard</a>
+<button class="btn btn-ghost" onclick="history.back()">Go back</button></div>
+</div></div>
 
 <script>
 (function(){
@@ -243,29 +166,6 @@ body{min-height:100vh}
    var el=x.target,to=parseFloat(el.dataset.count),suf=el.dataset.suffix||'',dec=(to%1!==0)?1:0,st=performance.now(),dur=1600;
    function step(t){var p=Math.min((t-st)/dur,1);p=1-Math.pow(1-p,3);el.textContent=(to*p).toFixed(dec)+suf;if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step);})},{threshold:.5});
  document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el)});
-})();
-
-(function(){
-var NAME=/^[A-Za-z ]+$/,MAIL=/^[^\s@]+@[^\s@]+\.(com|in|org)$/i,role='admin';
-var rs=document.getElementById('roles');
-if(rs)rs.addEventListener('click',function(e){var c=e.target.closest('.role');if(!c)return;
- rs.querySelectorAll('.role').forEach(function(x){x.classList.toggle('active',x===c)});role=c.dataset.role;});
-var f=document.getElementById('signupForm');if(!f)return;
-function bad(id,cond){document.getElementById('e-'+id).classList.toggle('show',cond);return !cond}
-f.addEventListener('submit',function(e){e.preventDefault();
- var n=document.getElementById('fn').value.trim(),em=document.getElementById('em').value.trim(),
-     pw=document.getElementById('pw').value,cp=document.getElementById('cp').value,ok=true;
- ok=bad('fn',!(n.length>1&&NAME.test(n)))&&ok;
- ok=bad('em',!MAIL.test(em))&&ok;
- ok=bad('pw',pw.length<6)&&ok;
- ok=bad('cp',cp!==pw||!cp)&&ok;
- ok=bad('tc',!document.getElementById('tc').checked)&&ok;
- if(!ok)return;
- localStorage.setItem('nyvora_name',n);
- localStorage.setItem('nyvora_email',em);
- localStorage.setItem('nyvora_username',em.split('@')[0]);
- localStorage.setItem('nyvora_role',role);
- window.location.href='/login.html';});
 })();
 </script>
 </body></html>
