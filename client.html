@@ -136,10 +136,17 @@ footer ul a:hover{color:#fff;transform:translateX(5px);text-shadow:0 0 18px rgba
 .side .nv.active{color:#fff;background:linear-gradient(135deg,rgba(155,92,255,.28),rgba(255,94,168,.16));border-color:var(--line);box-shadow:0 14px 34px -18px rgba(155,92,255,.9)}
 .side .nv span.i{width:26px;text-align:center}
 .main{padding:26px clamp(16px,3vw,38px) 60px;min-width:0}
-.topbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;margin-bottom:26px}
+.topbar{display:flex;align-items:center;gap:16px;margin-bottom:26px}
 .topbar h1{font-size:clamp(1.3rem,3vw,2rem);margin:0}
 .who{display:flex;align-items:center;gap:12px}
 .avatar{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--grad);color:#0A0614;font-weight:700;flex-shrink:0}
+.side-profile{display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line);margin-bottom:14px}
+.side-profile .sp-top{display:flex;align-items:center;gap:12px;min-width:0}
+.side-profile .avatar{width:42px;height:42px;font-size:.92rem}
+.side-profile .spInfo{min-width:0;flex:1}
+.side-profile .spInfo strong{display:block;color:#fff;font-size:.92rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.role-badge{display:inline-block;margin-top:4px;padding:2px 10px;border-radius:999px;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--line);color:var(--hi);background:rgba(60,242,255,.08)}
+.side-profile .spEmail{font-size:.78rem;color:var(--muted);word-break:break-all;padding-left:2px}
 .panel{display:none}.panel.on{display:block;animation:fade .5s}
 @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .kpi{padding:20px}
@@ -178,18 +185,24 @@ tbody tr:hover{background:rgba(155,92,255,.07)}
 <div class="app">
 <aside class="side" id="side">
 <div class="side-top">
-  <a class="logo" href="index.html" aria-label="stackly home">
+  <a class="logo" href="/index.html" aria-label="stackly home">
   <img src="./gellery/stackly-logo-gradient.webp" alt="Stackly logo">
 </a>
 <button class="dclose" id="dclose" aria-label="Close menu">×</button>
+</div>
+<div class="side-profile">
+  <div class="sp-top">
+    <div class="avatar" id="uInit">N</div>
+    <div class="spInfo"><strong id="uName">operator</strong><span class="role-badge" id="uRole">client</span></div>
+  </div>
+  <div class="spEmail" id="uMail">guest@nyvora.ai</div>
 </div>
 <div class="nv active" data-p="dashboard"><span class="i">🏠</span>Dashboard</div><div class="nv" data-p="analytics"><span class="i">📈</span>Usage</div><div class="nv" data-p="projects"><span class="i">📁</span>Projects</div><div class="nv" data-p="messages"><span class="i">💬</span>Messages</div><div class="nv" data-p="calendar"><span class="i">🗓️</span>Calendar</div><div class="nv" data-p="tasks"><span class="i">✅</span>Tasks</div><div class="nv" data-p="notifications"><span class="i">🔔</span>Notifications</div><div class="nv" data-p="settings"><span class="i">⚙️</span>Settings</div><div class="nv" data-p="profile"><span class="i">👤</span>Profile</div>
 <div class="nv" id="logout" style="margin-top:auto;color:#FF7BA8"><span class="i">⏻</span>Logout</div>
 </aside>
 <main class="main">
 <div class="topbar">
-<div style="display:flex;gap:12px;align-items:center;min-width:0"><button class="dburger" id="dburger" aria-label="Toggle menu">☰</button><div style="min-width:0"><h1 id="panelTitle">Client Dashboard</h1><p class="muted" style="margin:0">Welcome back, <span id="uName">operator</span> · <span id="uRole">client</span></p></div></div>
-<div class="who"><div style="text-align:right" class="muted"><div id="uMail" style="font-size:.85rem"></div></div><div class="avatar" id="uInit">N</div></div>
+<div style="display:flex;gap:12px;align-items:center;min-width:0"><button class="dburger" id="dburger" aria-label="Toggle menu">☰</button><div style="min-width:0"><h1 id="panelTitle">Client Dashboard</h1><p class="muted" style="margin:0">Welcome back, <span id="uNameTop">operator</span></p></div></div>
 </div>
 <section class="panel on" data-panel="dashboard" style="padding:0"><div class="grid g4"><div class="glass kpi reveal"><div class="muted" style="font-size:.82rem">Workspace agents</div><div class="stat-num"><span data-count="14" data-suffix="">0</span></div><div class="muted" style="font-size:.8rem">2 deploying</div></div><div class="glass kpi reveal"><div class="muted" style="font-size:.82rem">Actions used</div><div class="stat-num"><span data-count="126" data-suffix="k">0</span></div><div class="muted" style="font-size:.8rem">of 500k plan limit</div></div><div class="glass kpi reveal"><div class="muted" style="font-size:.82rem">Hours saved</div><div class="stat-num"><span data-count="412" data-suffix="">0</span></div><div class="muted" style="font-size:.8rem">this quarter</div></div><div class="glass kpi reveal"><div class="muted" style="font-size:.82rem">Open tickets</div><div class="stat-num"><span data-count="3" data-suffix="">0</span></div><div class="muted" style="font-size:.8rem">1 awaiting you</div></div></div>
 <div class="grid g2" style="margin-top:22px">
@@ -226,6 +239,7 @@ tbody tr:hover{background:rgba(155,92,255,.07)}
  var u=localStorage.getItem('nyvora_username')||'operator',
      m=localStorage.getItem('nyvora_email')||'guest@nyvora.ai',
      r=localStorage.getItem('nyvora_role')||'client';
+ document.getElementById('uNameTop').textContent=u;
  document.getElementById('uName').textContent=u;
  document.getElementById('uRole').textContent=r.charAt(0).toUpperCase()+r.slice(1);
  document.getElementById('uMail').textContent=m;
